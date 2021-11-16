@@ -33,12 +33,16 @@
 
       <!-- Nav Bar -->
 
+
+
+
       <nav class="navbar navbar-expand-lg navbar-dark">
+
         <a class="navbar-brand" href="">EVC Calculator</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse dropdown-menu-left" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="#footer">Contact</a>
@@ -51,6 +55,7 @@
             </li>
           </ul>
         </div>
+
       </nav>
 
 
@@ -94,7 +99,7 @@
 
       <div class="feature-box col-lg-4">
         <h2 class="features-logo"><i class="fas fa-bullseye fa-4x"></i></h2>
-        <h3 class="feature-title">Elite Clientele</h3>
+        <h3 class="feature-title">Elite Clientele.</h3>
         <p class="feature-explaination">We have hundred of great clients.</p>
       </div>
 
@@ -106,6 +111,65 @@
       </div>
 
     </div>
+  </section>
+
+
+  <!-- Calculator -->
+
+  <section id="Calculator">
+
+    <script type="text/javascript">
+
+
+
+  		function EVCC() {
+  			var h=document.getElementById('h').value;
+  			var w=document.getElementById('w').value;
+
+        if (w > -1 && h > -1 ){
+          var evccc=w*h;
+          var evccc=(evccc.toFixed(2));
+          	document.getElementById("result").innerHTML="Cost of charging your car is £ " + evccc;
+
+        }else {
+
+          	document.getElementById("result").innerHTML="Input can't be a negative number ";
+        };
+
+
+
+
+
+
+	// document.getElementById("result").innerHTML="Cost of charging your car is £ " + evccc;
+	}
+
+
+      function clearResult(){
+           document.getElementById("w").value = '';
+           document.getElementById("h").value = '';
+    }
+
+
+  	</script>
+
+    <div class="" >
+
+      <h2>EVC Calculator</h2>
+      <p class="text">Size of Car Battery in kWh </p>
+      <input type="number" id="h">
+      <p class="text">Charging Cost per kWh </p>
+      <input type="number" id="w">
+
+      <p id="result"></p>
+      <button id="btn" onclick="EVCC()">Calculate</button>
+      <button id="btn" value="Reset" onclick="clearResult()" >Reset</button>
+
+
+
+
+    </div>
+
   </section>
 
 
@@ -196,7 +260,7 @@
           <h3 class="pcebld">Standard</h3>
         </div>
         <div class="card-body">
-          <h2 class="pcebld">$49 / mo</h2>
+          <h2 class="pcebld">£49 / mo</h2>
           <p=class"p-fcolor">Unlimited Calculations</p>
           <p=class"p-fcolor">Unlimited Messages</p>
           <p=class"p-fcolor">Unlimited App Usage</p>
@@ -217,7 +281,7 @@
       <h3 class="pcebld">Premium</h3>
     </div>
     <div class="card-body">
-      <h2 class="pcebld">$99 / mo</h2>
+      <h2 class="pcebld">£99 / mo</h2>
       <p=class"p-fcolor">Pirority Pass</p>
       <p=class"p-fcolor">Unlimited Calculations</p>
       <p=class"p-fcolor">Unlimited Messages</p>
